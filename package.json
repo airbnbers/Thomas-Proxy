@@ -1,0 +1,41 @@
+{
+  "name": "bearbnb-thomas-proxy",
+  "version": "1.0.0",
+  "description": "Front-end capstone project",
+  "main": "/server/index.js",
+  "scripts": {
+    "test": "npm test",
+    "build-dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airbnbers/Thomas-Proxy.git"
+  },
+  "keywords": [
+    "front-end",
+    "bearbnb",
+    "airbnb",
+    "slideshow",
+    "photo",
+    "gallery",
+    "checkout",
+    "reviews"
+  ],
+  "author": "Thomas Hsu, Michael Lou, Dawn Saquin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/airbnbers/Thomas-Proxy/issues"
+  },
+  "homepage": "https://github.com/airbnbers/Thomas-Proxy#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3"
+  }
+}

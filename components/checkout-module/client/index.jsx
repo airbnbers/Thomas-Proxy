@@ -252,7 +252,7 @@ class Checkout extends React.Component {
                     <Modal
                       isOpen={this.state.modalOpen}
                       onRequestClose={this.closeModal}
-                      className="modal"
+                      className="checkout-modal modal"
                       contentLabel="Example Modal"
                     >
                       <button className="close-but" onClick={this.closeModal}>X</button>

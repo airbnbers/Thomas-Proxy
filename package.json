@@ -2,7 +2,7 @@
   "name": "bearbnb-thomas-proxy",
   "version": "1.0.0",
   "description": "Front-end capstone project",
-  "main": "/server/index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "npm test",
     "start": "nodemon"
@@ -29,5 +29,10 @@
   "homepage": "https://github.com/airbnbers/Thomas-Proxy#readme",
   "devDependencies": {
     "knex": "^0.16.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "http-proxy-middleware": "^0.19.1"
   }
 }

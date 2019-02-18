@@ -5,6 +5,24 @@ $border-bot: 1px solid rgb(218, 216, 216);
 $button-size: 24px;
 $small-font: 13px;
 
+#container {
+    margin-top: 20px !important;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1149px) {
+    #container {
+        
+        margin: 20px 0px 0px 0px !important;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    #container {
+        margin: auto auto 20px auto !important;
+    }
+}
+
 .checkout-modal {
     position: absolute;
     top: 40%;
@@ -19,6 +37,16 @@ $small-font: 13px;
     outline: none;
 }
 
+.checkout-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 6;
+}
+
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
     position: $position;
     top: $top;
@@ -31,7 +59,6 @@ $small-font: 13px;
     #app {
         @include position(fixed, $bottom: 0px);
         width: 100%;
-        height: auto;
         display: inline-flex;
         justify-content: center;     
         text-align: center;
@@ -39,6 +66,7 @@ $small-font: 13px;
         border-top: 1px solid rgb(206, 206, 206);
         height: 75px;
         background-color: white;
+        z-index: 6;
     }
 }
 

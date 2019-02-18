@@ -5,24 +5,6 @@ $border-bot: 1px solid rgb(218, 216, 216);
 $button-size: 24px;
 $small-font: 13px;
 
-#container {
-    margin-top: 20px !important;
-    margin-bottom: 10px;
-}
-
-@media screen and (max-width: 1149px) {
-    #container {
-        
-        margin: 20px 0px 0px 0px !important;
-    }
-}
-
-@media screen and (min-width: 1150px) {
-    #container {
-        margin: auto auto 20px auto !important;
-    }
-}
-
 .checkout-modal {
     position: absolute;
     top: 40%;
@@ -37,16 +19,6 @@ $small-font: 13px;
     outline: none;
 }
 
-.checkout-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.75);
-    z-index: 6;
-}
-
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
     position: $position;
     top: $top;
@@ -54,8 +26,11 @@ $small-font: 13px;
     bottom: $bottom;
     left: $left;
 }
-  
-@media screen and (max-width: 1149px) {
+
+#app {
+    background-color: white;
+}
+@media screen and (max-width: 1199px) {
     #app {
         @include position(fixed, $bottom: 0px);
         width: 100%;
@@ -70,7 +45,7 @@ $small-font: 13px;
     }
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1200px) {
     #app {
         position: sticky;
         top: 20px;
@@ -90,6 +65,7 @@ $small-font: 13px;
 }
 
 .header {
+    margin: 18px auto 18px auto;
     font-size: $small-font;
     padding-bottom: 18px;
     width: $width * .9;
@@ -189,18 +165,6 @@ $small-font: 13px;
     }
 }
 
-@media screen and (max-width: 576px) {
-    .sub-but {
-        max-width: 40% !important;
-        margin: auto auto auto 10px !important;
-    }
-    .footer {
-        .header {
-            margin: auto 10px auto auto;
-        }
-    }
-}
-
 
 
 .info {
@@ -213,7 +177,7 @@ $small-font: 13px;
 .sub-but {
     width: $width * .9;
     height: $height;
-    margin: auto 0px;
+    margin: 10px 0px 10px 0px;
     background-color: rgb(248, 125, 125);
     font-size: 18px;
     color: white;
@@ -238,3 +202,77 @@ $small-font: 13px;
         outline: 0;
     }
 }
+
+#container {
+    margin-top: 20px !important;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1149px) {
+    #container {
+        
+        margin: 20px 0px 0px 0px !important;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    #container {
+        margin: auto auto 20px auto !important;
+    }
+}
+
+.checkout-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 6;
+}
+
+.footer {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+
+    .header {
+        justify-content: center;
+        text-align: center;
+        border-bottom: none;
+        width: auto;
+        margin-right: 40px;
+
+        .reviews {
+            justify-content: center;
+        }
+    }
+
+    .sub-but {
+        width: $width * .9;
+        height: $height;
+        margin: 10px 0px 10px 0px;
+        background-color: rgb(248, 125, 125);
+        font-size: 18px;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        
+        &:focus{
+            outline: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sub-but {
+        max-width: 40% !important;
+        margin: auto auto auto 10px !important;
+    }
+    .footer {
+        .header {
+            margin: auto 10px auto auto;
+        }
+    }
+}
+

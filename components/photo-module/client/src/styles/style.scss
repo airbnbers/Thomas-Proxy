@@ -266,6 +266,15 @@ $btn-margin: 106px;
 
 // Slideshow modal
 .slideshow-modal {
+
+  .modal-full {
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    height: 100%;
+  }
+
   .close {
     color: white;
     font-size: 4rem;
@@ -313,20 +322,25 @@ $btn-margin: 106px;
   }
 
   .image-arrow-wrapper {
+    height: 68vh;
     @include masking-div();
   }
 
   @media screen and (max-width: 576px) {
     .image-arrow-wrapper {
       width: 100vw;
+      height: 68vh;
     }
   }
   
   .carousel-item {
-    max-height: 65vh;
+    height: 100%;
+    width: 100%;
     img {
       object-fit: fill;
       margin: 0 auto;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
 

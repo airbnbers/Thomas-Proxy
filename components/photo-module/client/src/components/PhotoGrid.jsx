@@ -114,7 +114,7 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
     
     {/* {Slideshow modal} */}
     <div className="slideshow-modal modal fade" id="slideshow-modal" tabIndex="-1" role="dialog" aria-labelledby="slideshow-modal" aria-hidden="true">
-      <div className="modal-dialog modal-full" role="document">
+      <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
             <button type="button" className="close" data-dismiss="modal" aria-label="Close">

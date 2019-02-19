@@ -141,6 +141,11 @@ $btn-margin: 106px;
 
 // MODAL
 
+@mixin full-screen() {
+  width: 100vw;
+  min-height: 100vh;
+}
+
 .modal-content {
   border-radius: 0;
 }
@@ -248,16 +253,19 @@ $btn-margin: 106px;
   }
 }
 
+@media (max-width: 576px) {
+  #share-modal, #save-modal {
+    .modal-dialog {
+      margin: 0;
+    }
+    .modal-content {
+      @include full-screen();
+    }
+  }
+}
+
 // Slideshow modal
 .slideshow-modal {
-  .modal-full {
-    width: 100%;
-    left: 0;
-    top: 0;
-    margin: 0;
-    height: 100%;
-  }
-
   .close {
     color: white;
     font-size: 4rem;

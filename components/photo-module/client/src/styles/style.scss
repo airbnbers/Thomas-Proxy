@@ -315,10 +315,10 @@ $btn-margin: 106px;
   }
   
   .carousel-item {
+    max-height: 65vh;
     img {
       object-fit: fill;
       margin: 0 auto;
-      width: 100%;
     }
   }
 

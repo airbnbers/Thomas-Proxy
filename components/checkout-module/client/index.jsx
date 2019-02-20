@@ -10,6 +10,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker } from 'react-dates';
 import FormBot from './components/form-bot.jsx';
 import Header from './components/form-top.jsx';
+Modal.setAppElement("#app");
 
 class Checkout extends React.Component {
   constructor(props) {

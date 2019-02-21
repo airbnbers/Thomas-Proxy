@@ -167,6 +167,11 @@ review-body {
   }
 }
 
+#reviews {
+  display: flex;
+  max-width: 700px;
+}
+
 // $primary-color: rgb(75, 75, 75);
 
 // @function black($opacity) {

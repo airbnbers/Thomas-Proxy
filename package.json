@@ -2,10 +2,10 @@
   "name": "bearbnb-thomas-proxy",
   "version": "1.0.0",
   "description": "Front-end capstone project",
-  "main": "server/index.js",
+  "main": "/server/index.js",
   "scripts": {
-    "test": "npm test",
-    "start": "nodemon"
+    "start": "node ./server/index.js",
+    "test": "npm test"
   },
   "repository": {
     "type": "git",

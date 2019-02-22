@@ -4,7 +4,7 @@ const proxy = require('http-proxy-middleware');
 
 const port = process.env.PORT || 3000;
 
-app.use('/rooms/:listingId/', express.static(__dirname + '/../client/dist'));
+app.use('/rooms/:listingId/', express.static(__dirname + '/../public'));
 
 app.use(
   '/rooms/1/images',

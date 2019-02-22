@@ -53,7 +53,7 @@ class Checkout extends React.Component {
 // Get request for listing information
   fetchRoom() {
     $.ajax({
-      url: 'http://localhost:3002/rooms/checkout/1/',
+      url: '/rooms/checkout/1/',
       type: 'GET',
       success: (results) => {
         this.setState({
@@ -80,7 +80,7 @@ class Checkout extends React.Component {
     });
 
     $.ajax({
-      url: 'http://localhost:3002/rooms/bookings/1/',
+      url: '/rooms/bookings/1/',
       type: 'get',
       success: (results) => {
         for (var i = 0; i < results.length; i++) {
@@ -138,7 +138,7 @@ class Checkout extends React.Component {
     var checkout = this.state.endDate.format('L').replace(/[/]/g, '-');
 
     $.ajax({
-      url: 'http://localhost:3002/rooms/checkout/1/',
+      url: '/rooms/checkout/1/',
       type: 'post',
       data: {
         checkIn: checkin,

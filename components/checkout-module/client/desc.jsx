@@ -25,7 +25,7 @@ class ListDesc extends React.Component {
 
     fetchRoom() {
         $.ajax({
-          url: 'http://localhost:3002/rooms/checkout/1',
+          url: '/rooms/checkout/1',
           type: 'GET',
           success: (results) => {
             this.setState({

@@ -34,7 +34,7 @@ class App extends React.Component {
   async grabReviews() {
     try {
       const response = await axios.get(
-        "http://localhost:3003/rooms/reviews/recent"
+        "/rooms/reviews/recent"
       );
       // console.log("REVIEWS RECEIVED FROM DB!");
       // console.log(response.data);
@@ -64,7 +64,7 @@ class App extends React.Component {
 
   async queryReviewListings(query) {
     axios
-      .get("http://localhost:3003/rooms/reviews/filter", {
+      .get("/rooms/reviews/filter", {
         params: { data: query }
       })
       .then(res => {
@@ -73,7 +73,7 @@ class App extends React.Component {
   }
 
   async customReviewListings(query) {
-    axios.get(`http://localhost:3003/rooms/reviews/${query}`).then(res => {
+    axios.get(`/rooms/reviews/${query}`).then(res => {
       this.filterReviews(res.data);
     });
   }

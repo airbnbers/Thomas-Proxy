@@ -41,7 +41,7 @@ class ReviewEntry extends React.Component {
               roundedCircle
             />
           </Col>
-          <Col lg={6} sm={6} xs={6} xl={6}>
+          <Col lg={6} sm={8} xs={8} xl={6}>
             <Row className="username">{this.props.review.username}</Row>
             <Row>
               {moment(this.props.review.created_at)
@@ -54,11 +54,15 @@ class ReviewEntry extends React.Component {
           <Col lg={12} sm={12} xs={12} xl={12}>
             {this.props.review.description.slice(0, 111)}
             {this.state.expanded && this.props.review.description.slice(111)}
-            {this.props.review.description.length > 100 && this.state.dots && (
-              <button onClick={this.expandText} className="read-btn">
-                {this.state.read}
-              </button>
-            )}
+            {!this.state.expanded &&
+              this.props.review.description.length > 111 && (
+                <span>
+                  {this.state.dots}
+                  <button onClick={this.expandText} className="read-btn">
+                    {this.state.read}
+                  </button>
+                </span>
+              )}
           </Col>
         </Row>
       </li>

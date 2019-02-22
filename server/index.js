@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 app.use('/rooms/:listingId/', express.static(__dirname + '/../public'));
 
 app.use(
-  '/rooms/1/images',
+  '/rooms/:listingId/images',
   proxy({
     target:'http://bearbnb-photo-module.us-east-2.elasticbeanstalk.com/',
     changeOrigin: true

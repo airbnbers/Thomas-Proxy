@@ -14,21 +14,21 @@ app.use(
   })
 );
 
-// app.use(
-//   '/rooms/1',
-//   proxy({
-//     target:'http://127.0.0.1:3002',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/rooms/checkout/:listingId',
+  proxy({
+    target:'http://checkout-dev.us-east-2.elasticbeanstalk.com/',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/rooms/bookings/1',
-//   proxy({
-//     target:'http://127.0.0.1:3002',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/rooms/bookings/:listingId',
+  proxy({
+    target:'http://checkout-dev.us-east-2.elasticbeanstalk.com/',
+    changeOrigin: true
+  })
+);
 
 // app.use(
 //   '/rooms/reviews/recent',
